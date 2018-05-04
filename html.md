@@ -55,5 +55,20 @@ UTF-8 编码具有更广泛的适应性,BOM 在使用程序或工具处理文件
 `text/css` 和 `text/javascript` 是 type 的默认值。
 
 #### [建议]在 `head` 中引入页面需要的所有 `CSS` 资源，`JavaScript` 应当放在页面末尾，或采用异步加载
+示例:
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="test.css">
+        ......
+    </head>
+    <body>
+        ......
+        <script src="test.js"></script>
+    </body>
+</html>
+```
 解释:
 在页面渲染的过程中，新的CSS可能导致元素的样式重新计算和绘制，页面闪烁;将 script 放在页面中间将阻断页面的渲染。出于性能方面的考虑，如非必要，请遵守此条建议。
