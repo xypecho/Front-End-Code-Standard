@@ -17,15 +17,6 @@
 
 
 ---
-
-
-
-
-
-
----
-
-
   [1]: css-style-guide.md
   [2]: html-style-guide.md
   [3]: javascript-style-guide.md
