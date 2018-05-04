@@ -13,3 +13,4 @@
 <table><tr><td bgcolor=#7FFFD4>
 背景颜色
 </td></tr></table>
+<font style='color:red'>强制</font>
