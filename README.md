@@ -1,212 +1,51 @@
-# awesome_
-css里面class和id的命名规范
-常用的css命名规则  <br>
-头：header <br>
 
-内容：content/container <br>
+# Front-End-Code-Standard
 
-尾：footer <br>
+前端手册
 
-导航：nav <br>
+目录
 
-侧栏：sidebar <br>
+ 1. [CSS编码规范][1]
+ 2. [HTML编码规范][2]
+ 3. [JavaScript编码规范][3]
+ 4. [其他规范][4]
+ 5. [开发工具的使用][5]
+ 6. [好书推荐篇][6]
+ 7. [学习指导篇][7]
+ 8. [前端优化][8]
+ 9. [其他][9]
+ 9. [更多知识点见issues](https://github.com/giscafer/front-end-manual/issues/)
 
-栏目：column <br>
-页面外围控制整体布局宽度：wrapper <br>
+目录不全，请阅读[在线版](https://giscafer.gitbooks.io/front-end-manual/content/)
 
-左右中：left right center <br>
+下载离线版：[pdf](https://www.gitbook.com/download/pdf/book/giscafer/front-end-manual)、[epub](https://www.gitbook.com/download/epub/book/giscafer/front-end-manual)、[mobi](https://www.gitbook.com/download/mobi/book/giscafer/front-end-manual)
 
-登录条：loginbar <br>
 
-标志：logo <br>
+---
 
-广告：banner <br>
+文档会不定时更新，可以`Watch`或`Star`本文挡——[Github](https://github.com/giscafer/front-end-manual)，更欢迎您加入编辑维护
 
-页面主体：main <br>
+*声明：编码规范参考[百度前端开发规范]修改，或整理于互联网，如有侵权请联系giscafer@outlook.com。*
 
-热点：hot <br>
+*整理人列表：[contibutors](https://github.com/giscafer/front-end-manual/graphs/contributors)*
 
-新闻：news <br>
 
-下载：download <br>
+**欢迎关注微信公众号：giscafer**
 
-子导航：subnav <br>
+![微信公众号giscafer](./img/qrcode_for_giscafer.jpg)
 
-菜单：menu <br>
+---
 
-子菜单：submenu <br>
+> [giscafer.com](http://giscafer.com) &nbsp;&middot;&nbsp;
+> GitHub [@giscafer](https://github.com/giscafer) &nbsp;&middot;&nbsp;
+> Weibo [@Nickbing Lao](https://weibo.com/laohoubin)
 
-搜索：search <br>
-
-友情链接：friendlink <br>
-
-页脚：footer <br>
-
-版权：copyright <br>
-
-滚动：scroll <br>
-
-内容：content <br>
-
-标签页：tab <br>
-
-文章列表：list <br>
-
-提示信息：msg <br>
-
-小技巧：tips <br>
-
-栏目标题：title <br>
-
-加入：joinus <br>
-
-指南：guild <br>
-
-服务：service <br> <br> <br> <br>
-
-注册：regsiter
-
-状态：status
-
-投票：vote
-
-合作伙伴：partner <br>
-
-----------------------------------------------------------------------------------------
-id的命名:<br>
-(1)页面结构 <br>
-
-容器: container <br>
-
-页头：header<br>
-
-内容：content/container<br>
-
-页面主体：main<br>
-
-页尾：footer<br>
-
-导航：nav<br>
-
-侧栏：sidebar<br>
-
-栏目：column<br>
-
-页面外围控制整体布局宽度：wrapper<br>
-
-左右中：left right center<br>
-(2)导航 <br>
-
-导航：nav <br>
-
-主导航：mainbav<br>
-
-子导航：subnav<br>
-
-顶导航：topnav<br>
-
-边导航：sidebar<br>
-
-左导航：leftsidebar<br>
-
-右导航：rightsidebar<br>
-
-菜单：menu<br>
-
-子菜单：submenu<br>
-
-标题: title<br>
-
-摘要: summary<br>
-
-(3)功能 <br>
-
-标志：logo <br>
-
-广告：banner <br>
-
-登陆：login <br>
-
-登录条：loginbar <br>
-
-注册：regsiter <br>
-
-搜索：search <br>
-
-功能区：shop <br>
-
-标题：title <br>
-
-加入：joinus <br>
-
-状态：status <br>
-
-按钮：btn <br>
-
-滚动：scroll <br>
-
-标签页：tab <br>
-
-文章列表：list <br>
-
-提示信息：msg <br>
-
-当前的: current <br>
-
-小技巧：tips <br>
-
-图标: icon <br>
-
-注释：note <br>
-
-指南：guild <br>
-
-服务：service <br>
-
-热点：hot <br>
-
-新闻：news <br>
-
-下载：download <br>
-
-投票：vote <br>
-
-合作伙伴：partner <br>
-
-友情链接：link <br>
-
-版权：copyright <br>
-
-
-
-
----------------------------------------------------------------------------------------
-注意事项::<br>
-
-1.一律小写;<br>
-
-2.尽量用英文;<br>
-
-3.不加中杠和下划线;<br>
-
-4.尽量不缩写，除非一看就明白的单词.<br>
-
-主要的 master.css<br>
-
-模块 module.css<br>
-
-基本共用 base.css<br>
-
-布局，版面 layout.css<br>
-
-主题 themes.css<br>
-
-专栏 columns.css<br>
-
-文字 font.css<br>
-
-表单 forms.css<br>
-
-补丁 mend.css<br>
-
-打印 print.css<br>
+  [1]: css-style-guide.md
+  [2]: html-style-guide.md
+  [3]: javascript-style-guide.md
+  [4]: other-style-guide.md
+  [5]: ./devtool/dev-tool-intro.md
+  [6]: recommended-books.md
+  [7]: study-guide.md
+  [8]: web-performance-optimization.md
+  [9]: ./other_tech/http-api-design.md
