@@ -1,8 +1,6 @@
 
 # Front-End-Code-Standard
 
-目录
-
  * [HTML编码规范][1]
  * [CSS编码规范][2]
  * [JavaScript编码规范][3]
