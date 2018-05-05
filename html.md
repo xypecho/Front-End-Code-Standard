@@ -1,6 +1,6 @@
 # HTML编码规范
 
-## 1、头部声明
+## 1、头部声明部分
 
 
 ### [强制]使用 `HTML5` 的 `doctype` 来启用标准模式，建议使用大写的 `DOCTYPE`
@@ -177,5 +177,59 @@ title 中如果包含 ascii 之外的字符，浏览器需要知道字符编码�
 alert(document.getElementById('foo').tagName);
 </script>
 ```
-
+解释:  
+IE 浏览器会混淆元素的 id 和 name 属性， document.getElementById 可能获得不期望的元素。所以在对元素的 id 与 name 属性的命名需要非常小心。  
+一个比较好的实践是，为 id 和 name 使用不同的命名法。
 ### 
+
+### [强制] 标签名必须使用小写字母
+示例:
+```
+<!-- good -->
+<p>hello world</p>
+<!-- bad -->
+<P>hello world</P>
+```
+
+### [强制] 对于无需自闭合的标签，不允许自闭合
+示例:
+```
+<!-- good -->
+<input type="text" name="title">
+
+<!-- bad -->
+<input type="text" name="title" />
+```
+
+### [强制] 对 `HTML5` 中规定允许省略的闭合标签，不允许省略闭合标签
+示例:
+```
+<!-- good -->
+<ul>
+    <li>first</li>
+    <li>second</li>
+</ul>
+
+<!-- bad -->
+<ul>
+    <li>first
+    <li>second
+</ul>
+```
+
+### [强制] 标签使用必须符合标签嵌套规则
+解释：  
+比如 div 不得置于 p 中，tbody 必须置于 table 中。
+
+### [建议] `HTML` 标签的使用应该遵循标签的语义
+示例:
+```
+<!-- good -->
+<p>Esprima serves as an important <strong>building block</strong> for some JavaScript language tools.</p>
+
+<!-- bad -->
+<div>Esprima serves as an important <span class="strong">building block</span> for some JavaScript language tools.</div>
+```
+解释:  
+下面是常见标签语义  
+- p -段落
