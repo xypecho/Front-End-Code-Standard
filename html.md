@@ -274,14 +274,14 @@ IE 浏览器会混淆元素的 id 和 name 属性， document.getElementById 可
 
 ### [建议] 布尔类型的属性，建议不添加属性值。
 示例：
-```html
+```
 <input type="text" disabled>
 <input type="checkbox" value="1" checked>
 ```
 
 ### [建议] 自定义属性建议以 `xxx-` 为前缀，推荐使用 `data-`
 示例：
-```html
+```
 <ol data-ui-type="Select"></ol>
 ```
 解释：
