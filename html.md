@@ -82,3 +82,25 @@ UTF-8 编码具有更广泛的适应性,BOM 在使用程序或工具处理文件
 解释:  
 省略URL的协议声明，浏览器照样可以正常引用相应的资源，这项解决方案称为`protocol-relative URL`，暂且可译作 协议相对 URL。如果当前的页面是通过HTTPS协议来浏览的，那么网页中的资源也只能通过HTTPS协议来引用，否则IE浏览中就会出现"页面同时包含安全和非安全的项目"的警告信息；如果使用协议相对 URL，无论你是使用HTTPS，还是HTTP访问页面，浏览器都会以与你相同的协议请求页面中的资源，避免弹出这样的警告信息，同时可以节省5字节的数据量。
 需要注意的是：在IE7 / IE8中，使用 <link> 或者 @import 来引用样式表时，会出现样式表文件被下载两次的情况。除了这点，协议相对 URL都是可以正常工作的。
+
+### [强制] 页面必须包含 `title` 标签声明标题，且必须作为 `head` 的直接子元素，并紧随 `charset` 声明之后
+示例:
+```
+<head>
+    <meta charset="UTF-8">
+    <title>页面标题</title>
+</head>
+```
+解释:  
+title 中如果包含 ascii 之外的字符，浏览器需要知道字符编码类型才能进行解码，否则可能导致乱码
+
+### [强制] 保证 `favicon` 可访问
+示例:
+```
+<link rel="shortcut icon" href="path/to/favicon.ico">
+```
+解释:  
+在未指定 favicon 时，大多数浏览器会请求 Web Server 根目录下的 favicon.ico 。为了保证favicon可访问，避免404，必须遵循以下两种方法之一：  
+
+1. 在 Web Server 根目录放置 favicon.ico 文件。  
+2. 使用 link 指定 favicon。  
