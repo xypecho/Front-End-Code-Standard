@@ -230,6 +230,5 @@ IE 浏览器会混淆元素的 id 和 name 属性， document.getElementById 可
 <!-- bad -->
 <div>Esprima serves as an important <span class="strong">building block</span> for some JavaScript language tools.</div>
 ```
-解释:  
-下面是常见标签语义  
-- p -段落
+解释:  
+常见的html语义化标签看[这里](http://www.aazzp.com/2017/10/30/html5%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/)
