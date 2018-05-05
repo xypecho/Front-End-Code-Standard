@@ -232,3 +232,57 @@ IE 浏览器会混淆元素的 id 和 name 属性， document.getElementById 可
 ```
 解释:  
 常见的html语义化标签看[这里](http://www.aazzp.com/2017/10/30/html5%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/)
+
+### [建议] 在 `CSS` 可以实现相同需求的情况下不得使用表格进行布局
+解释:  
+在兼容性允许的情况下应尽量保持语义正确性。对网格对齐和拉伸性有严格要求的场景允许例外，如多列复杂表单
+
+### [建议] 标签的使用应尽量简洁，减少不必要的标签
+示例:
+```
+<!-- good -->
+<img class="avatar" src="image.png">
+
+<!-- bad -->
+<span class="avatar">
+    <img src="image.png">
+</span>
+```
+
+### [强制] 属性名必须使用小写字母
+示例:
+```
+<!-- good -->
+<table cellspacing="0">...</table>
+
+<!-- bad -->
+<table cellSpacing="0">...</table>
+```
+
+### [强制] 属性值必须用双引号包围
+示例：
+```html
+<!-- good -->
+<script src="esl.js"></script>
+
+<!-- bad -->
+<script src='esl.js'></script>
+<script src=esl.js></script>
+```
+解释：  
+不允许使用单引号，不允许不使用引号。
+
+### [建议] 布尔类型的属性，建议不添加属性值。
+示例：
+```html
+<input type="text" disabled>
+<input type="checkbox" value="1" checked>
+```
+
+### [建议] 自定义属性建议以 `xxx-` 为前缀，推荐使用 `data-`
+示例：
+```html
+<ol data-ui-type="Select"></ol>
+```
+解释：
+使用前缀有助于区分自定义属性和标准定义的属性。
