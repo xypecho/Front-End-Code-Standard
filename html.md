@@ -105,3 +105,77 @@ title 中如果包含 ascii 之外的字符，浏览器需要知道字符编码�
 
 1. 在 Web Server 根目录放置 favicon.ico 文件。  
 2. 使用 link 指定 favicon。  
+
+### [建议]页面欲对移动设备友好，需指定页面的 `viewport`
+示例:
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+```
+解释:  
+该meta标签的作用是让当前viewport的宽度等于设备的宽度，同时不允许用户手动缩放。也许允不允许用户缩放不同的网站有不同的要求，但让viewport的宽度等于设备的宽度，这个应该是大家都想要的效果，如果你不这样的设定的话，那就会使用那个比屏幕宽的默认viewport，也就是说会出现横向滚动条。
+
+## 2、 代码风格
+
+
+### [强制] 使用 `4` 个空格做为一个缩进层级，不允许使用 `2` 个空格 或 `tab` 字符
+示例:
+```
+<ul>
+    <li>first</li>
+    <li>second</li>
+</ul>
+```
+
+### [强制] `class` 必须单词全字母小写，单词间以 `-` 分隔;必须代表相应模块或部件的内容或功能，不得以样式信息进行命名
+示例:
+```
+<!--good-->
+<div class="sidebar"></div>
+
+<!-- bad -->
+<div class="left"></div>
+```
+
+### [强制]元素 `id` 必须保证页面唯一
+解释:  
+同一个页面中，不同的元素包含相同的 id，不符合 id 的属性含义。并且使用 document.getElementById 时可能导致难以追查的问题。
+
+### [建议] `id` 建议单词全字母小写，单词间以 `-` 分隔，同项目必须保持风格一致
+
+### [建议]`id`、`class` 命名，在避免冲突并描述清楚的前提下尽可能短
+示例:
+```
+<!-- good -->
+<div id="nav"></div>
+<!-- bad -->
+<div id="navigation"></div>
+
+<!-- good -->
+<p class="comment"></p>
+<!-- bad -->
+<p class="com"></p>
+
+<!-- good -->
+<span class="author"></span>
+<!-- bad -->
+<span class="red"></span>
+```
+
+###  [强制] 禁止为了 `hook 脚本`，创建无样式信息的 `class`
+解释:  
+不允许 class 只用于让 JavaScript 选择某些元素，class 应该具有明确的语义和样式。否则容易导致 css class 泛滥。  
+使用 id、属性选择作为 hook 是更好的方式。
+
+### [强制] 同一页面，应避免使用相同的 `name` 与 `id`
+示例:
+```
+<!-- bad -->
+<input name="foo">
+<div id="foo"></div>
+<script>
+// IE6 将显示 INPUT
+alert(document.getElementById('foo').tagName);
+</script>
+```
+
+### 
